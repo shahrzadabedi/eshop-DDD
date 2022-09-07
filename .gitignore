@@ -26,3 +26,6 @@
 /Framework/.nuke
 /OrderManagement/OrderManagement.ِDomain/obj
 /OrderManagement/OrderManagement.Domain/obj
+/OrderManagement/.vs
+/OrderManagement/OrderManagement/.vs/OrderManagement.Domain
+/OrderManagement/OrderManagement.Application.Contracts/bin/Debug/net6.0
