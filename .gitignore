@@ -3,3 +3,24 @@
 ################################################################################
 
 /OrderManagement/.vs/OrderManagement/DesignTimeBuild
+/OrderManagement/.vs/OrderManagement/v16
+/OrderManagement/OrderManagement/obj
+/OrderManagement/OrderManagement.Application/obj
+/OrderManagement/OrderManagement.Application.Contracts/obj
+/OrderManagement/OrderManagement.Config/obj
+/OrderManagement/OrderManagement.Infrastructure.Persistence.EF/obj
+/OrderManagement/OrderManagement.RestApi/obj
+/OrderManagement/OrderManagement.ServiceHost/obj
+/.vs
+/Framework/.vs/Framework
+/Framework/buildscript/bin/Debug
+/Framework/buildscript/obj
+/Framework/src/Framework.Application/bin/Debug/netcoreapp3.1
+/Framework/src/Framework.Application/obj
+/Framework/src/Framework.Core/bin/Debug/netcoreapp3.1
+/Framework/src/Framework.Core/obj
+/Framework/src/Framework.Domain/bin/Debug/netcoreapp3.1
+/Framework/src/Framework.Domain/obj
+/Framework/test/Framework.Domain.Tests.Unit/bin/Debug/netcoreapp3.1
+/Framework/test/Framework.Domain.Tests.Unit/obj
+/Framework/.nuke

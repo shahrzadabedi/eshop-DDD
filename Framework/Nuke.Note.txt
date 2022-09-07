@@ -1,0 +1,7 @@
+dotnet tool install Nuke.GlobalTool --global
+
+goto Framework folder=> nuke :setup
+?_build
+./buildscript
+
+.\build.ps1
