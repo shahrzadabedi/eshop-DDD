@@ -28,6 +28,7 @@ namespace OrderManagement.ServiceHost
         {
 
             services.AddControllers();
+            services.AddHealthChecks();
         }
         public void ConfigureContainer(ContainerBuilder builder)
         {
@@ -48,6 +49,7 @@ namespace OrderManagement.ServiceHost
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
             });
         }
     }

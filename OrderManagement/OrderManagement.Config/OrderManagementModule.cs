@@ -13,7 +13,7 @@ namespace OrderManagement.Config
     {
         protected override void Load(ContainerBuilder builder)
         {
-            var connectionString = "";
+            var connectionString = "server=.; Initial Catalog=OrderManagement;User ID=sa;Password=1qaz@WSX";
             builder.RegisterType<AutofacCommandBus>()
                 .As<ICommandBus>()
                 .InstancePerLifetimeScope();

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -13,6 +13,7 @@
     <ProjectReference Include="..\OrderManagement.Application.Contracts\OrderManagement.Application.Contracts.csproj" />
     <ProjectReference Include="..\OrderManagement.Application\OrderManagement.Application.csproj" />
     <ProjectReference Include="..\OrderManagement.Infrastructure.Persistence.EF\OrderManagement.Infrastructure.Persistence.EF.csproj" />
+    <ProjectReference Include="..\OrderManagement.RestApi\OrderManagement.RestApi.csproj" />
     <ProjectReference Include="..\OrderManagement\OrderManagement.Domain.csproj" />
   </ItemGroup>
 
