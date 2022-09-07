@@ -29,3 +29,9 @@
 /OrderManagement/.vs
 /OrderManagement/OrderManagement/.vs/OrderManagement.Domain
 /OrderManagement/OrderManagement.Application.Contracts/bin/Debug/net6.0
+/OrderManagement/OrderManagement/bin/Debug/net6.0
+/OrderManagement/OrderManagement.Application/bin/Debug/net6.0
+/OrderManagement/OrderManagement.Config/bin/Debug/net6.0
+/OrderManagement/OrderManagement.Infrastructure.Persistence.EF/bin/Debug/net6.0
+/OrderManagement/OrderManagement.RestApi/bin/Debug/net6.0
+/OrderManagement/OrderManagement.ServiceHost/bin/Debug/net6.0

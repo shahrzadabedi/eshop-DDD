@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Framework.Application;
+using Microsoft.AspNetCore.Mvc;
+using OrderManagement.Application.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +20,7 @@ namespace OrderManagement.RestApi
         }
 
         [HttpPost]
-        public IActionResult Post(PlaceLoanApplication command)
+        public IActionResult Post(PlaceOrder command)
         {
             _bus.Dispatch(command);
             return Ok();
