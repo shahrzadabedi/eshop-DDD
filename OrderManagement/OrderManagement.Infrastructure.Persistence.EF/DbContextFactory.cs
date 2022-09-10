@@ -15,5 +15,6 @@ public     class DbContextFactory
             return new OrderManagementDbContext(options);
 
         }
+
     }
 }

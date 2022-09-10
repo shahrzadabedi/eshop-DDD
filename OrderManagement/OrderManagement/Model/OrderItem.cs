@@ -12,6 +12,7 @@ namespace OrderManagement.Domain.Model
         public decimal Quantity { get; private set; }
         public decimal UnitPrice { get; private set; }
         public string Comment { get; private set; }
+        public ProductId ProductId { get; private set; }
         public string ShippingInstructions { get; private set; }
         public DateTime EstimatedDeliveryDate { get; private set; }
         public string ItemDescription { get; private set; }
