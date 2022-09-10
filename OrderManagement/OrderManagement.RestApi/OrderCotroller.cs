@@ -11,10 +11,10 @@ namespace OrderManagement.RestApi
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class OrderCotroller: ControllerBase
+    public class OrderController: ControllerBase
     {
         private ICommandBus _bus;
-        public OrderCotroller(ICommandBus bus)
+        public OrderController(ICommandBus bus)
         {
             this._bus = bus;
         }
