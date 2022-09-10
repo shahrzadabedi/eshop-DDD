@@ -14,8 +14,11 @@ namespace OrderManagement.Infrastructure.Persistence.EF.Mappings
         public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
             builder.ToTable("OrderItem").HasKey(a => a.Id);
-            builder.OwnsOne(a => a.ProductId)
-                .Property(p => p.Value).HasColumnName("ProductId");
+            builder.Property<int>("ProductId")
+            .IsRequired();
+            //builder.OwnsOne(a => a.ProductId)
+               // .Property(p => p.Value).HasColumnName("ProductId");
+
         }
     }
 }

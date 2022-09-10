@@ -15,13 +15,13 @@ namespace OrderManagement.Infrastructure.Persistence.EF.Repositories
         {
             this._dbContext = dbContext;
         }
-        public async  Task Add(Order aggregate)
+        public  void Add(Order aggregate)
         {
-            await _dbContext.Orders.AddAsync(aggregate);
-            await _dbContext.SaveChangesAsync(); //TODO: replace with unit of work
+             _dbContext.Orders.Add(aggregate);
+             _dbContext.SaveChanges(); //TODO: replace with unit of work
         }
 
-        public Task<Order> Find(Guid id)
+        public Order Find(Guid id)
         {
             throw new NotImplementedException();
         }

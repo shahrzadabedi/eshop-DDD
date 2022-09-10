@@ -13,7 +13,7 @@ namespace OrderManagement.Domain.Model
         public DateTime OrderDateTime { get; private set; }
         public DateTime EntryDateTime { get; private set; }
         private List<OrderItem> _orderItems = new();
-        public IReadOnlyCollection<OrderItem> OrderItems { get; }
+        public IReadOnlyCollection<OrderItem> OrderItems { get { return _orderItems.AsReadOnly(); } }
         public Order(DateTime orderDateTime, DateTime entryDateTime)
         {
             Id = Guid.NewGuid();

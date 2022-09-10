@@ -75,7 +75,7 @@ class Build : NukeBuild
                             .SetNoRestore(true)
                             .SetNoBuild(true)
                             .SetOutputDirectory(ArtifactPath)
-                            .SetVersion("2.0.4")        //TODO: replace this with git version
+                            .SetVersion("2.0.5")        //TODO: replace this with git version
                                                         //.SetVersion(GitVersion.NuGetVersionV2)
                                                         //.SetAssemblyVersion(GitVersion.AssemblySemVer)
                 );

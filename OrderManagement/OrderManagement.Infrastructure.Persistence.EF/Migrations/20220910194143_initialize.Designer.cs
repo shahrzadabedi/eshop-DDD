@@ -10,7 +10,7 @@ using OrderManagement.Infrastructure.Persistence.EF;
 namespace OrderManagement.Infrastructure.Persistence.EF.Migrations
 {
     [DbContext(typeof(OrderManagementDbContext))]
-    [Migration("20220910070104_initialize")]
+    [Migration("20220910194143_initialize")]
     partial class initialize
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,10 +40,9 @@ namespace OrderManagement.Infrastructure.Persistence.EF.Migrations
 
             modelBuilder.Entity("OrderManagement.Domain.Model.OrderItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Comment")
                         .HasColumnType("nvarchar(max)");
@@ -56,6 +55,9 @@ namespace OrderManagement.Infrastructure.Persistence.EF.Migrations
 
                     b.Property<Guid?>("OrderId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Quantity")
                         .HasColumnType("decimal(18,2)");

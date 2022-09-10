@@ -22,8 +22,15 @@ namespace OrderManagement.RestApi
         [HttpPost]
         public IActionResult Post(PlaceOrder command)
         {
-            _bus.Dispatch(command);
-            return Ok();
+            try
+            {
+                _bus.Dispatch(command);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message); ;
+            }
         }
     }
 }

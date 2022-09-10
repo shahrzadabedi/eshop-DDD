@@ -9,7 +9,7 @@ namespace OrderManagement.Domain
 {
    public interface IOrderRepository
     {
-        Task Add(Order aggregate);
-        Task<Order> Find(Guid id);
+        void Add(Order aggregate);
+        Order Find(Guid id);
     }
 }

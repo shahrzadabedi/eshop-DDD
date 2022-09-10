@@ -13,10 +13,16 @@ namespace Framework.Application
         {
             _scope = scope;
         }
-        public async Task Dispatch<T>(T command) where T : ICommand
+        public async Task DispatchAsync<T>(T command) where T : ICommand
         {
             var handler = _scope.Resolve<ICommandHandler<T>>();
-            await handler.Handle(command);
+            await handler.HandleAsync(command);
+
+        }
+        public void Dispatch<T>(T command) where T : ICommand
+        {
+            var handler = _scope.Resolve<ICommandHandler<T>>();
+             handler.Handle(command);
 
         }
     }

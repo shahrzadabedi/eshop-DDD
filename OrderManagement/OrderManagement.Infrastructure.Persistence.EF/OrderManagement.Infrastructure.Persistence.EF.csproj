@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220910080113_Add_ProductId_ToOrderItem.cs" />
+    <Compile Remove="Migrations\20220910080113_Add_ProductId_ToOrderItem.Designer.cs" />
+    <Compile Remove="Migrations\20220910080539_Add_ProductId_ToOrderItem_fix.cs" />
+    <Compile Remove="Migrations\20220910080539_Add_ProductId_ToOrderItem_fix.Designer.cs" />
+    <Compile Remove="Migrations\20220910192643_change_Product_Id_to_int.cs" />
+    <Compile Remove="Migrations\20220910192643_change_Product_Id_to_int.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
@@ -15,6 +24,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OrderManagement\OrderManagement.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -4,6 +4,7 @@ namespace Framework.Application
 {
     public interface ICommandBus
     {
-        Task Dispatch<T>(T command) where T : ICommand;
+        Task DispatchAsync<T>(T command) where T : ICommand;
+        void Dispatch<T>(T command) where T : ICommand;
     }
 }

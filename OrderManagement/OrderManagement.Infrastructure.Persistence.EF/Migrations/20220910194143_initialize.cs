@@ -24,11 +24,11 @@ namespace OrderManagement.Infrastructure.Persistence.EF.Migrations
                 name: "OrderItem",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Quantity = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
                     ShippingInstructions = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EstimatedDeliveryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ItemDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),

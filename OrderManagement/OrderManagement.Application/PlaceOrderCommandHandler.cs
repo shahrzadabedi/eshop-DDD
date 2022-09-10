@@ -17,15 +17,23 @@ namespace OrderManagement.Application
         {
             _orderRepository = orderRepository;
         }
-        public async Task Handle(PlaceOrder command)
+
+
+        public Task HandleAsync(PlaceOrder command)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICommandHandler<PlaceOrder>.Handle(PlaceOrder command)
         {
             var order = new Order(command.OrderDateTime, DateTime.Now);
             // TODO calculate estimated delivery date
             DateTime estimatedDeliveryDate = DateTime.Now;
             List<Domain.Model.OrderItem> orderItems = new List<Domain.Model.OrderItem>();
-            command.OrderItems.ForEach(p => orderItems.Add(new Domain.Model.OrderItem(p.Quantity, p.UnitPrice, p.Comment, p.ShippingInstructions, DateTime.Now, p.Description)));
-            order.PlaceOrderItems(orderItems ) ;
-            await _orderRepository.Add(order);
+            command.OrderItems.ForEach(p => orderItems.Add(new Domain.Model.OrderItem(p.Quantity, p.UnitPrice, 10, p.Comment, p.ShippingInstructions, DateTime.Now, p.Description)));
+            order.PlaceOrderItems(orderItems);
+            _orderRepository.Add(order);
+
         }
     }
 }
